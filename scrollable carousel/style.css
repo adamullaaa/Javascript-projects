@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+/*astric means to select all types of elements in an HTML page*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex; /*widened a bit the view and it put the below text to the right*/
+    padding:0 35px ;/*squished the photos*/
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /*centered overall pictures*/
+    background: #343F4F;
+}
+.wrapper{
+    max-width: 1200px;
+    position: relative; /*widened the images*/
+}
+.wrapper i{
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+     /*centered the arrows position*/
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(0%);
+    
+}
+.wrapper i :first-child{
+    left: -23px; /*probably has to do with max len it could reach*/
+    display: none;
+}
+.wrapper i :last-child{
+    right: -23px;
+}
+
+/*put the whole content into an horizontal pattern*/
+.wrapper .carousel{
+    font-size: 0px; /*removed the spaces between pictures */
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;/*side the images together*/
+    scroll-behavior: smooth;
+}
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img{
+    pointer-events: none;
+}
+/*calc function performs claculations, it fits images as the number divided suggests*/
+/*object fit makes the images fit to the sides of page*/
+.carousel img{
+    height: 340px;
+    object-fit: cover;
+    margin-left: 14px;/*it had put some spaces and defined margins*/
+    width: calc(100%/3);
+}
+
+.carousel img:first-child{
+    margin-left: 0px;/*removed the space at the left*/
+
+
+}
+/*as it looks, it fits whatever image in a given space*/
+@media screen and (max-width: 900px){
+    .carousel img{
+        width: calc(100%/2);
+    }
+}
+@media screen and (max-width: 550px){
+    .carousel img{
+        width: 100%;
+    }
+}
+
+
+
