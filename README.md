@@ -1,5 +1,5 @@
 # Javascript-projects
-# the upcoming pieces of code are just my own understanding and practical application to what I have learnt during my internship period, I hope it helps! you may take a peice by piece function and try it out 
+# the upcoming pieces of code are just my own understanding and practical application to what I have learnt during my internship period, I hope it helps! you may take a piece by piece function and try it out 
 JavaScript notes:
 -created in 1995 and released in 1996, brenden eich? must be put in a HTML document and enclosed
 in brackets of <script></script>. The script function can be put any where, in the example 
